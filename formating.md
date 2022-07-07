@@ -1,3 +1,5 @@
+<!-- This content will not appear in the rendered Markdown -->
+
 # The largest heading
 ## The second largest heading
 ###### The smallest heading
@@ -21,3 +23,9 @@ This site was built using [This is the link](https://pages.github.com/)
 - First nested list item
 - List Item
 - List Item
+
+
+```python
+import datetime
+print("Hello")
+```

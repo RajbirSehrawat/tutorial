@@ -3,4 +3,4 @@
 ###### The smallest heading
 
 **Bold between two stars**
-* * Italic between 2 stars, but gap in starts * *
+* Italic between 2 stars, but gap in starts *

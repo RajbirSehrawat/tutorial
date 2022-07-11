@@ -93,3 +93,74 @@ secure_filename
 from werkzeug.utils import secure_filename
 
 
+#Python Default Logging
+
+```python
+#!/usr/bin/env python
+import logging
+
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%Y-%m-%d:%H:%M:%S',
+    level=logging.DEBUG)
+
+logger = logging.getLogger(__name__)
+logger.debug("This is a debug log")
+logger.info("This is an info log")
+logger.critical("This is critical")
+logger.error("An error occurred")
+```
+
+#How to generate good secret keys
+
+```
+python -c 'import secrets; print(secrets.token_hex())'
+'192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
+```
+
+# Configuring from Python Files
+The configuration files themselves are actual Python files. Only values in uppercase are actually stored in the config object later on.
+
+```
+app = Flask(__name__)
+app.config.from_object('yourapplication.default_settings')
+app.config.from_envvar('YOURAPPLICATION_SETTINGS')
+```
+
+# Configuring from Data Files
+
+```
+import toml
+app.config.from_file("config.toml", load=toml.load)
+```
+
+```
+import json
+app.config.from_file("config.json", load=json.load)
+```
+
+# Blueprints and Views
+
+```
+auth.py
+bp = Blueprint('auth', __name__, url_prefix='/auth')
+
+in main file
+
+from . import auth
+app.register_blueprint(auth.bp)
+```
+# Session
+
+```python
+    # Store in session
+    session['name'] = "name"
+
+    # Get value from session
+    name = session.get('user_id')
+
+    #remove the username from the session if it's there
+    session.pop('username', None)
+
+    #clear session or delete all session varidables
+    session.clear()
+```

@@ -80,7 +80,7 @@ url_for -
 Generates a URL to the given endpoint with the method provided.
 It accepts the name of the function as its first argument and any number of keyword arguments, each corresponding to a variable part of the URL rule. Unknown variable parts are appended to the URL as query parameters.
 
-```
+```python
 make_response()
 redirect()
 abort()
@@ -96,7 +96,7 @@ secure_filename()
 from werkzeug.utils import secure_filename
 ```
 
-#Python Default Logging
+### Python Default Logging
 
 ```python
 #!/usr/bin/env python
@@ -113,7 +113,7 @@ logger.critical("This is critical")
 logger.error("An error occurred")
 ```
 
-#How to generate good secret keys
+### How to generate good secret keys
 
 ```
 python -c 'import secrets; print(secrets.token_hex())'

@@ -53,9 +53,9 @@ def show_post(post_id):
 
 # Static Files
 
-'''
+```
 url_for('static', filename='style.css')
-'''
+```
 
 
 
@@ -63,14 +63,14 @@ url_for('static', filename='style.css')
 
 Inside templates you also have access to the config, request, session and g 1 objects as well as the url_for() and get_flashed_messages() functions.
 
-'''python
+```python
 from flask import render_template
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
     return render_template('hello.html', name=name)
-'''
+```
 
 
 # Flask Functions 
@@ -80,20 +80,21 @@ url_for -
 Generates a URL to the given endpoint with the method provided.
 It accepts the name of the function as its first argument and any number of keyword arguments, each corresponding to a variable part of the URL rule. Unknown variable parts are appended to the URL as query parameters.
 
-
+```
 make_response()
 redirect()
 abort()
 jsonify() - 
 flash() - set flash message
 get_flashed_messages() - get session flash message
+```
 
 # Other Function
 
-
-secure_filename
+```
+secure_filename()
 from werkzeug.utils import secure_filename
-
+```
 
 #Python Default Logging
 

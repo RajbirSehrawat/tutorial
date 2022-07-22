@@ -27,12 +27,14 @@ def hello(name):
 
 # Flask Request
 
+```
 request.method
 request.form
 request.files
 request.get_json()
 request.args.get('key', '') - Query String
 request.cookies.get('username')
+```
 
 # Flask Route
 

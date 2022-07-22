@@ -126,7 +126,7 @@ app.config.from_object('yourapplication.default_settings')
 app.config.from_envvar('YOURAPPLICATION_SETTINGS')
 ```
 
-# Configuring from Data Files
+### Configuring from Data Files
 
 ```
 import toml
@@ -163,4 +163,12 @@ app.register_blueprint(auth.bp)
 
     #clear session or delete all session varidables
     session.clear()
+```
+
+# Flask Call Back
+
+```
+before_request()
+after_request()
+after_this_request()
 ```

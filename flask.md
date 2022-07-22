@@ -38,7 +38,7 @@ request.cookies.get('username')
 
 # Flask Route
 
-
+```
 @app.route('/projects/') - Represent a Directory
 @app.route('/projects') - Represent a File
 
@@ -49,7 +49,7 @@ request.cookies.get('username')
 def show_post(post_id):
     # show the post with the given id, the id is an integer
     return f'Post {post_id}'
-
+```
 
 # Static Files
 

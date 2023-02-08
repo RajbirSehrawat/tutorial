@@ -175,3 +175,12 @@ before_request()
 after_request()
 after_this_request()
 ```
+
+# Functions
+
+```
+1. Checksums
+2. Yield
+3. hashlib
+
+```

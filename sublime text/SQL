@@ -1,0 +1,43 @@
+SQL
+----
+1. How create a table in database
+2. How to find duplicate records in table
+3. How to remove duplicate from database
+4. What is the difference between primary key and foregin key
+5. How alter a columen datatype in table
+6. How to create forigen key in table
+
+
+----------------------------------------------
+1. Find the duplicate value in table
+2. Remove the duplicate rows from a table.
+3. Remove the smallest duplicate value or keep the smallest 2 rows and remove others
+
+4. Find the 3rd higest salary from table
+5. Find the the 3rd higest salary from a table for all the deparment. (Development, HR, Testing)
+6. RANK (Row_number) in Sql
+7. How to query to a partitions 
+8. What is the difference between innter join and outjoin
+8. What are the left outer join and what are the right outer join
+8. Self join, example of self join
+8. Full join, Cross join
+
+
+9. How to change male to female and female to male in table
+
+
+10. How to optimizate database
+12. Whare are indexes, Type of Indexes, Uniquery Index, Indexing advantages and Disdavtes
+
+13. What are temp tables
+14. What are views. What is the differnce between temp table and views
+
+15. What are triggers, type of triggers. advantages and disadvantegs of triggers.
+16. What are Curser, What are the advantes of cursoer and disadvantegs of cursors
+
+-------------------------------
+11. What is CAP Therorem
+12. What is partitions
+13. What is Database sharding
+
+----------------------------------

@@ -1,0 +1,27 @@
+django.template.backends.django.DjangoTemplates
+django.template.Engine
+
+Humanize - 
+https://docs.djangoproject.com/en/4.1/ref/contrib/humanize/
+
+{# this won't be rendered #}
+A {% comment %} tag provides multi-line comments.
+
+
+
+{% csrf_token %}
+{% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}
+
+
+
+
+Filters
+
+{{ django|title }}
+{{ my_date|date:"Y-m-d" }}
+
+
+
+-
+get_template()
+select_template()

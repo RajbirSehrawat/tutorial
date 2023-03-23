@@ -1,0 +1,40 @@
+https://diveinto.org/python3/table-of-contents.html
+Docker, Docker Compose, Dcoker Swarm, Kubernities
+--------------------------------------------------
+Jenkins, SonarCube
+-------------------------------------------------
+Micro-Service, Event Driven Microservices
+=================================================
+REST API, SOAP API, 
+
+Throttle, Rate Limit, Asyncrous API
+
+Difference Between Put and Patch
+Delete multiple resource - API route
+=====================================================
+Git, Swaggar, Open API, Postman
+=====================================================
+
+HTTP Headers,
+
+HTTP Authentication, Bearn, Basic
+======================================================
+
+Pyhon, OOPS, 
+
+Multi-Threading, Multi Processing, Concurrenty
+
+Multi-Threading Issues in python
+
+Packages, Module
+
+UNIT Test Cases (pyunittest, pytest)
+-----------------------------------------------------------
+
+SET, Tuble, Dict, List, Random Number
+Method, Lambda Function, Iterator, Generator
+===========================================================
+
+HLD, LLD, Solid Principle, ACID,
+========================================================
+Python Celery, Redis, RabitMQ, Elastic Search, Kafka

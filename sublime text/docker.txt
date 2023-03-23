@@ -1,0 +1,46 @@
+docker pull, 
+docker push, 
+docker images, 
+docker build,
+docker ps,
+docker run, 
+docker stop,
+docker rm,
+docker network create
+docker network rm foodtrucks-net
+docker network inspect foodtrucks_default/bridge
+
+docker-compose up
+docker-compose up -d
+docker-compose down -v
+
+docker-compose run web bash
+========================================
+Docker Swarm
+-----------------------
+swarm init
+swarm join
+service create
+service inspect
+service ls
+service rm
+service scale
+service ps
+service update
+
+query_filter['job_title'] = {'$regex' : job_title, '$options' : 'i'} 
+
+
+Python/OOPS/Flask/testcases
+Data Structor and Algorithms
+Kafka/Docker/Git/Kubernites
+Sql/mysql/mongodb
+microservices/event driven/
+
+pandas/numpy
+
+
+
+
+
+

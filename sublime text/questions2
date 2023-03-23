@@ -1,0 +1,93 @@
+1. How memory is managed in python
+2. Problem with Multi-Threading in Python
+3. How payhton will handle multi-process
+4. What is GIL in python
+5. How to convert - 1 to 1 in python
+6. What is decorator in python
+7. What is the difference between list, array and tuple in python and which one is faster and more effiencet and why or how
+8. What is Meta Class in python
+9. What is Closre in python
+10. What are generators in python
+11. what a re itterators in python
+12. How multiple inheritance is used in python
+13. What is monkey pathcing in python
+14. What is MRO in python
+15. What is singleton design pattern in pyton and where use this (exam of singleton design pattern)
+16. Which is more efficient iterator or loop
+
+
+17. Difference Between Shallow Copy and Deep Copy. How to Deep Copy Data
+18. How to handle exception globally in python  (---important----)
+19. What are maggic methods in python
+20. What is ZiF
+21. What are lamda function
+22. What is the difference between Lambda Function and Normal Function
+
+23. What is Enumration in python, Program of Enumration
+24. What is Frozone Set
+
+25. What is PEP8
+26. What is the length of identifier in python (79 characters)
+27. What is the length of expression in python (79-character)
+
+28. What is the difference between == and is() in python
+29. How many reserved word in python (33)
+30. What is the difference between array and list in python
+31. What is decorator in python. Write a decorator to convert paramter in Upper Case.
+32. What is Difference Between Generator and itterators. Are Iterators Generators.
+33. What is the difference between multithreading and asyncrous programming.
+
+34. Serialization in python, Which serialization library you have used
+
+35. How to you authenticate and authorization in flask apis.
+
+
+
+Pandads.
+----------
+1. What is data frame in python
+2. How to get from given number to till number range of data from data frame
+3. How to get value from a specific column in pandas
+
+
+--
+DB
+==========
+1. Difference between Truncate and Delete Command
+2. Difference Between Relational and Non relational Database
+3. Query to get top 10 result in sql
+4. How to get the duplicate records drom table
+5. How to remove the duplicate records from table
+6. Get the number of users registed on each day like weekdays (Monday, Tuesday, Wednesday)
+
+
+7. Write the query find the duplicate from the table
+
+8. Write the query to find the 3rd highest salary from each department out of mulitiple departments
+9. Write the query to find the 3rd highest salary from a table
+10. How to repare a table in database
+11. How to refresh a table in data
+12. How to write the query to access the value from a partition.
+
+
+
+Docker
+==================================
+1. How to build a docker image - write full syntax
+2. What is Docker Compose
+
+
+==================================
+Django
+
+1. What is Template in Django
+2. What is django architecutre MVC, MVT
+3. What happend if we change django model Boolean to Char.
+4. How to find user registed on each day monday to friday
+5. Default File Upload Size in Django
+
+
+Code
+=====
+1. Sort an array (ASC/DESC) without inbuilt function
+2. Write bubble sort function for sorting an array

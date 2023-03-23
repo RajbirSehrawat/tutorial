@@ -1,0 +1,65 @@
+from django.db import models
+
+
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    artist = models.ForeignKey(Musician, on_delete=models.CASCADE)
+    release_date = models.DateField()
+    num_stars = models.IntegerField()
+    data = models.JSONField(null=True)
+
+
+Each field in your model should be an instance of the appropriate Field class.
+
+
+null
+If True, Django will store empty values as NULL in the database. Default is False.
+blank
+If True, the field is allowed to be blank. Default is False.
+
+choices
+A sequence of 2-tuples to use as choices for this field. If this is given, the default form widget will be a select box instead of the standard text field and will limit choices to the choices given.
+
+
+default
+help_text
+primary_key
+unique
+Verbose field names
+
+
+''Relationships
+
+
+Many-to-one relationships¶
+Many-to-many relationships
+One-to-one relationships
+
+OneToOneField
+ManyToManyField
+
+
+''Meta options
+
+https://docs.djangoproject.com/en/4.1/ref/models/options/
+
+    ordering = ["horn_length"]
+    verbose_name_plural = "oxen"
+    app_label
+    base_manager_name
+    db_table
+    get_latest_by
+    ordering = ['-order_date']
+    permissions
+    indexes
+    unique_together
+    index_together
+    constraints
+    verbose_name
+
+
+Model methods:
+
+__str__()
+get_absolute_url()

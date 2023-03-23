@@ -1,0 +1,26 @@
+1. Recevied Inpupt Data (POST, GET, Query Strings, Files)
+2. How to upload file in flask
+3. how to handle session in flask
+4. What is the difference between Flask and Django
+5. How to write unit test cases to test apis
+6. How to you deployed your project with aws (docker/lamda function)
+7. When deployed with with docker/lambda which configuration file required to modification
+8. What is WSGI in flask
+-----------------------------
+
+9. What are FlaskView
+10. What are cors, How to configure cors in python
+11. Path parameters in python
+12. Logging in flask
+13. Which file is called first in flask.
+
+==============================================
+
+1. How flask handle the request
+2. What is the life cycle of flask app
+3. How to handle multiple requests in flask - like 500, 1000
+4. Python is single thread application, How to handle the multiple requests
+5. How to design enterprise application in flak
+
+6. How to Handle multiple environments configuations
+

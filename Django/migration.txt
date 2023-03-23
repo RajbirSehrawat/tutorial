@@ -1,0 +1,22 @@
+
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py makemigrations --name changed_my_model your_app_label
+
+python manage.py makemigrations your_app_label
+python manage.py makemigrations --empty yourappname
+
+
+
+Reversing migrations
+python manage.py migrate books 0002
+python manage.py migrate books zero
+
+
+Squashing migrations
+
+manage.py 	squashmigrations myapp 0004
+			squashmigrations --squashed-name

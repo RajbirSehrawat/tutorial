@@ -1,0 +1,17 @@
+Filter()
+Map()
+reduced() - from functools
+accumulate() - from itertools
+from abc import ABC, abstractmethod (for defining abstract class and abstract metods)
+---------
+
+List
+
+insert()
+append()
+extends()
+
+---
+
+enumerate()
+Use enumerate() and zip() together in Python

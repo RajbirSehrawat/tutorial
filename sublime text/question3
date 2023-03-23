@@ -1,0 +1,103 @@
+1. What is the difference between list and tuple
+2. What is set and what is fronze set
+3. What is teh difference between map and filter methods
+4. What is reduce method
+5. What is dictionary. What can be dictionary keys. How Dictionary Keys are mangred
+6. What is the complixity of List
+7. What is good to use tuple and list
+7. Why tuple are faster than list
+7. Why tuple consume less memory (Tuples are immutable so, It doesn't require extra space to store new objects)
+Ans - Tuple has a small memory. List has a large memory. Tuple is stored in a single block of memory. Creating a tuple is faster than creating a list.
+
+8. What is the difference between Generator and Iterator. Write Generator Program of fibonici series.
+
+9. What is the difference between json load and json dump
+10. What is the difference between re.match() and re.find()
+11. What is regex
+12. How to synchrozie multiple thread in python
+13. Multi Threading and Multiprocessing in Python. What is the difference. How to achieve multi process in python
+14. What is the difference between tuple and set
+
+15. How to handle errors in python. Exception Handleing, Try/Except.
+16. What is python path function, what paramerters passed to path function.
+
+17. What are the middlewares in python.
+18. Loggin in python
+
+19. What is cors, how to setup cors
+
+
+20. What is the difference between sort and sorted.
+21. How to remove duplicate from a list
+22. How to find the duplicate value in list.
+
+
+23.  L1=[10,11,12] and l2=[1,2,3]  what is the output = L1+L2
+24.  L1=[10,11,12] and l2=[1,2,3] what is the ouput = L1-L2
+
+25. l1=[c,a,b] and l2=[b,bb,a,ab,c] What is the out of l1.sort(), l2.sort()
+
+26. What is exception handleing in python. Try, Except and Finally
+
+
+
+Program:
+---------
+
+1. find the samllest element in list
+2. find the second largest in list
+3. find the repeated character/word in string
+4. find the sum of all element in tuple/list
+5. Find the even/odd in list
+6. Find the sub of value in dict keys {'a': 10, 'b': 200, 'c': 300}
+
+1. Fibionic Series
+2. Find Second Highest in List
+
+array = [1,2,3,4,5]
+new_array = []
+
+size = len(array) #5
+for ar in array:
+  loc = array.index(ar) #0
+  loc += 2
+  
+  if loc > (size-1):
+	loc = loc - size
+  new_array[loc] = ar
+  
+print(new_array)
+  
+
+Write a program to create an array and rotate the elements stored in the array by two positions.
+
+The program should first take the input of array size and then the elements of the array. Then program should rotate the elements of the array by 2.
+
+Example Input : 12345 Output : 45123
+
+
+
+
+
+
+
+1. Radio Button in job questions
+2. Footer link on ms9 remove https
+3. Logo for subdomain in sharing job profile
+
+Syllabus
+Cat. 4
+Cat. 27
+Cat. 57
+
+XC9NWVEC2SP0J6E5.WEB.cjBlYzFyMHUyaXQwZXIzNmU2YjE1MTRmMjcyNDQyOGJiMzE0MmVhM2EzYzlmNTc=.NzVkYjI5Y2NlNDU5NDgwNTgyNWRlZWMxOTIxNDI1OGU=.DRIDGES.WEB.SSOFALSE.51432220230310110613.1440
+
+
+Version Control API - IKW-QCS
+
+===
+
+Expert knowledge of Python (Closures, Decorators, Multithreading, multiprocess, regular expressions etc)
+Solid understanding of Object-Oriented design and concepts
+Worked on Django, Rest framework
+Exposure of AWS Services (like Kinesis Data Streams, Kinesis Firehose, EC2, S3, IAM, Lambda, CloudFormation, CloudWatch Log groups, CloudWatch Alarm, VPC, EBS, Route 53, Endpoints, Elasticsearch Service, Peering Connections)

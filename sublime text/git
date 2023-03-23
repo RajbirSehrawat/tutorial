@@ -1,0 +1,31 @@
+git init
+git clone
+git list config
+git set remote
+
+--------------------
+
+git status
+git add
+git commit
+git push
+git pull
+
+git remove
+
+git log
+git stash
+git revert
+
+git branch - create, remove local, remove remote
+git checkout branch, git checkout file
+git merge 
+git rebase
+
+git diff
+
+
+mongodb://ikonadmin:adminikon%40123@18.204.175.144:27017/?authSource=admin&readPreference=primary&directConnection=true&ssl=false
+
+
+mongodb+srv://ikonuser99:LOxPy68ftH4sQpPr@ikonwork-proddb.ebple.mongodb.net/?retryWrites=true&w=majority

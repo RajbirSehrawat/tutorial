@@ -1,0 +1,291 @@
+
+woxa- technical
+
+from django.db.models import F
+from django.db.models import Min
+from django.db.models import OuterRef, Subquery, Sum
+from django.db.models import Q
+
+Query Methods
+https://docs.djangoproject.com/en/4.1/ref/models/querysets/
+
+Raw Query:
+Person.objects.raw('SELECT * FROM myapp_person'):
+Person.objects.raw('SELECT id, first_name, last_name, birth_date FROM myapp_person')
+Person.objects.raw('''SELECT first AS first_name, last AS last_name, bd AS birth_date, pk AS id, FROM some_other_table''')
+--
+name_map = {'first': 'first_name', 'last': 'last_name', 'bd': 'birth_date', 'pk': 'id'}
+Person.objects.raw('SELECT * FROM some_other_table', translations=name_map)
+first_person = Person.objects.raw('SELECT * FROM myapp_person')[0]
+first_person = Person.objects.raw('SELECT * FROM myapp_person LIMIT 1')[0]
+people = Person.objects.raw('SELECT id, first_name FROM myapp_person')
+people = Person.objects.raw('SELECT *, age(birth_date) AS age FROM myapp_person')
+person.objects.raw('SELECT * FROM myapp_person WHERE last_name = %s', [lname]) #passing parameters
+
+Most of the time you’ll use all(), get(), filter() and exclude() when you need to look up objects from the database
+
+entry = Entry.objects.get(pk=1)
+Blog.objects.get(id__exact=14) # Explicit form
+Blog.objects.get(id=14) # __exact is implied
+Blog.objects.get(pk=14) # pk implies id__exact
+Blog.objects.filter(pk__in=[1,4,7])
+Blog.objects.filter(pk__gt=14)
+Entry.objects.filter(blog__id__exact=3) # Explicit form
+Entry.objects.filter(blog__id=3)        # __exact is implied
+Entry.objects.filter(blog__pk=3) 
+
+Dog.objects.filter(data__isnull=True)
+
+
+
+cheese_blog = Blog.objects.get(name="Cheddar Talk")
+
+Author.objects.create(name="Joe")
+
+all_entries = Entry.objects.all()
+
+
+filter(**kwargs)
+exclude(**kwargs)
+
+
+Entry.objects.filter(pub_date__year=2006)
+Entry.objects.all().filter(pub_date__year=2006)
+
+Query chain
+
+Entry.objects.filter(headline__startswith='What').exclude(pub_date__gte=datetime.date.today()).
+filter(pub_date__gte=datetime.date(2005, 1, 30))
+
+
+q1 = Entry.objects.filter(headline__startswith="What")
+q2 = q1.exclude(pub_date__gte=datetime.date.today())
+q3 = q1.filter(pub_date__gte=datetime.date.today())
+
+
+Limiting QuerySets
+
+Entry.objects.all()[:5]
+Entry.objects.all()[5:10]
+
+For example, this would actually execute the query in order to return a list of every second object of the first 10:
+Entry.objects.all()[:10:2]
+
+Below Both are same
+Entry.objects.order_by('headline')[0]
+Entry.objects.order_by('headline')[0:1].get()
+
+
+Field lookups
+
+Entry.objects.filter(pub_date__lte='2006-01-01')
+SELECT * FROM blog_entry WHERE pub_date <= '2006-01-01';
+
+Entry.objects.get(headline__exact="Cat bites dog")
+Blog.objects.get(id__exact=14)
+Blog.objects.get(id=14)
+Blog.objects.get(name__iexact="beatles blog")
+Entry.objects.get(headline__contains='Lennon')
+
+
+
+Join
+--------
+Entry.objects.filter(blog__name='Beatles Blog')
+Blog.objects.filter(entry__headline__contains='Lennon')
+Blog.objects.filter(entry__authors__name='Lennon')
+Blog.objects.filter(entry__authors__name__isnull=True)
+Blog.objects.filter(entry__authors__isnull=False, entry__authors__name__isnull=True)
+
+
+Spanning multi-valued relationships
+
+Blog.objects.filter(entry__headline__contains='Lennon', entry__pub_date__year=2008)
+Blog.objects.filter(entry__headline__contains='Lennon').filter(entry__pub_date__year=2008)
+
+comapre the columen in same row
+Entry.objects.filter(number_of_comments__gt=F('number_of_pingbacks'))
+
+
+The F() objects support bitwise operations by .bitand(), .bitor(), .bitxor(), .bitrightshift(), and .bitleftshift(). For example:
+
+
+Entry.objects.filter(pub_date__year=F('mod_date__year'))
+Entry.objects.aggregate(first_published_year=Min('pub_date__year'))
+
+
+Match Like
+
+iexact, contains, icontains, startswith, istartswith, endswith and iendswith
+
+Entry.objects.filter(headline__contains='%')
+Django takes care of the quoting for you; the resulting SQL will look something like this:
+SELECT ... WHERE headline LIKE '%\%%';
+
+
+Caching and QuerySets
+
+Each QuerySet contains a cache to minimize database access
+
+queryset = Entry.objects.all()
+print([p.headline for p in queryset]) # Evaluate the query set.
+print([p.pub_date for p in queryset]) # Reuse the cache from the evaluation.
+
+Querying JSONField¶
+
+Dog.objects.create(name='Archie', data=Value('null'))  # JSON null.
+
+
+Dog.objects.create(name='Rufus', data={
+...     'breed': 'labrador',
+...     'owner': {
+...         'name': 'Bob',
+...         'other_pets': [{
+...             'name': 'Fishy',
+...         }],
+...     },
+... })
+Dog.objects.create(name='Meg', data={'breed': 'collie', 'owner': None})
+
+
+Dog.objects.filter(data__breed='collie')
+Dog.objects.filter(data__owner__name='Bob'
+If the key is an integer, it will be interpreted as an index transform in an array:
+Dog.objects.filter(data__owner__other_pets__0__name='Fishy')
+Dog.objects.filter(data__owner__isnull=True)
+
+
+
+icontains, endswith, iendswith, iexact, regex, iregex, startswith, istartswith, lt, lte, gt, and gte,
+https://docs.djangoproject.com/en/4.1/topics/db/queries/#containment-and-key-lookups
+
+
+
+'''Containment and key lookups
+
+contains
+
+Dog.objects.create(name='Meg', data={'breed': 'collie', 'owner': 'Bob'})
+Dog.objects.filter(data__contains={'breed': 'collie'})
+
+contained_by
+Dog.objects.filter(data__contained_by={'breed': 'collie'})
+
+has_key
+Dog.objects.filter(data__has_key='owner')
+
+has_keys
+og.objects.filter(data__has_keys=['breed', 'owner'])
+
+has_any_keys
+Dog.objects.filter(data__has_any_keys=['owner', 'breed'])
+
+
+'Complex lookups with Q objects
+
+Q objects can be combined using the &, |, and ^ operators. When an operator is used on two Q objects, it yields a new Q object.
+
+Q(question__startswith='Who') | ~Q(pub_date__year=2005)
+Q(question__startswith='Who') | Q(question__startswith='What')
+WHERE question LIKE 'Who%' OR question LIKE 'What%'
+
+Poll.objects.get(
+    Q(question__startswith='Who'),
+    Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6))
+)
+
+SELECT * from polls WHERE question LIKE 'Who%'
+    AND (pub_date = '2005-05-02' OR pub_date = '2005-05-06')
+
+
+'Deleting objects | Delete
+
+e.delete()
+Entry.objects.filter(pub_date__year=2005).delete()
+
+b = Blog.objects.get(pk=1)
+b.delete()
+
+'''Delete - All
+This is a safety mechanism to prevent you from accidentally requesting Entry.objects.delete(), and deleting all the entries
+
+Entry.objects.all().delete()
+
+
+'Updating multiple objects at once
+
+Entry.objects.filter(pub_date__year=2007).update(headline='Everything is the same')
+
+ b = Blog.objects.get(pk=1)
+# Update all the headlines belonging to this Blog.
+>>> Entry.objects.filter(blog=b).update(headline='Everything is the same')
+
+Entry.objects.update(number_of_pingbacks=F('number_of_pingbacks') + 1)
+
+
+ select_related() 
+ count()
+ get()
+ all()
+ add()
+
+ create()
+ remove()
+ clear()
+ set()
+
+ order_by
+ asc() and desc() 
+ reverse()
+ distinct()
+ values()
+ values_list()
+ dates()
+ datetimes(field_name, kind, order='ASC', tzinfo=None, is_dst=None)¶
+ none()
+
+ union()¶
+ intersection()
+ difference()
+ select_related()
+ prefetch_related()
+ extra()
+ defer()
+ only()
+ using()
+
+ select_for_update()
+ get_or_create()
+ update_or_create()
+
+ bulk_create()
+ bulk_update()
+ in_bulk()
+
+ iterator()
+ latest()
+ earliest()
+ first()
+ last()
+ aggregate()
+ exists()
+ contains()
+ update()
+ delete()
+ explain()
+ as_manager()
+
+
+ Field Lookup
+ ------------
+
+ exact
+ iexact
+ contains
+ icontains
+ in, gt, gte, lt, lte, 
+ startswith, istartswith, endswith, iendswith, range, date, year, iso_year, month, day, week, week_day,iso_week_day
+ quarter, time, hour, minute, second, isnull, regex, iregex, 
+
+
+ Avg, Count, Max, Min, StdDev, Sum, Variance, Q(), 

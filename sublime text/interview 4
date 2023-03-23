@@ -1,0 +1,53 @@
+ms4 prod database uri-pending  - Not pushed to qc
+------------------------------
+
+
+1. How to handle multiple requests in flask - like 500, 1000
+2. Python is single thread application, How to handle the multiple requests
+
+3. How to design enterprise application in Flask
+4. How to Handle multiple environments configuations
+5. How to handle deployment of enterprise level application
+6. How to handle logging in enterprise level applciation
+
+
+---------------------------------------------------------------------
+
+1. What to do if token exprie in jwt.
+2. CSRF, How to handle csrf
+3. What are middleware in djngo, how to write middlewrare
+
+4. Series method in Pandas.
+5. How to make urls private in swagger. Not allowed to view by client.
+6. What is jwt, how its worked
+7. How to handle globe exceptions in python
+8. How to log request and response in your application using python
+
+9. What is cors, How to set cors configuration
+10. What are the methods in python collections (counter, orderedDict, defaultDict)
+
+12. How to count character in a string, How to count words in string, How to reverse words in string, How to reverse words in string
+
+https://www.geeksforgeeks.org/reverse-string-python-5-different-ways/
+https://www.geeksforgeeks.org/python-frequency-of-each-character-in-string/
+
+13. How to reverse in word
+https://www.geeksforgeeks.org/reverse-words-given-string-python/
+
+
+-------------------------------------------------
+1. How python manage memory
+1. How to release memory in python. Which function to call to release the memeory
+1. Python Scope, there are four types of scopes, which are as follows:
+	Global Scope.
+	Local Scope.
+	Enclosing Scope.
+	Built-in Scope.
+
+2. Diffent Type of Datatype in python
+3. What is the difference between iterator and generator. Which is faster, which is more memory efficent.
+4. What is the difference between list and tupple, which is faster, which is more memory efficient, which is used when.
+
+
+
+mongodb+srv://uatmasteruser11:jfFMxOvnTOiLLsPB@cluster0.bduj6.mongodb.net/ms7uatdridges?retryWrites=true&w=majority

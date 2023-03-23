@@ -1,0 +1,24 @@
+series
+dataframe
+
+read_csv()
+read_json()
+
+to_string()
+head()
+tail()
+
+fillna()
+dropna()
+df.dropna(subset=['Date'], inplace = True)
+
+mean() - Average
+median() - middle 
+mode() - the value apread more frequently
+
+=============================================
+
+ 
+
+
+

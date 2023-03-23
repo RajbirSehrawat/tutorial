@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------
+Wed - 3PM - Microsft Team
+
+L1 Tech || Rajbir || Python || Gurgaon
+
+Manasi Subhash Gunjal
+
+----
+
+
+post_id = WP20220202121104003386
+commanet _id = COM20230216130332767740
+
+
+class A():
+    def__int__()
+
+ClassB(A):
+    def_init_():
+        A.__init()
+
+Class C(A,B):
+    A.__init()
+    B.__init()
+
+--
+
+
+old_list = [[1, 2, 3], [4, 5, 6], [7, 8, 'a']] 
+new_list = old_list 
+new_list[2][2] = 9
+print(old_list)
+print(new_list)
+
+
+l1 = []t1 = () d1 = {l1: 'value1',t1: 'value2'}

@@ -1,0 +1,31 @@
+1. What is the difference between Map, filter and reduce function in python
+2. Split and Join in python
+3. List comperhance
+4. counter repeated number in list
+5. Labda function in python
+6. Decorators in python
+
+
+
+Frozen a set
+To make a set immutable, you use the built-in function called frozenset(). The frozenset() returns a new immutable set from an existing one. For example:
+
+skills = {'Problem solving', 'Software design', 'Python programming'}
+skills = frozenset(skills)
+Code language: JavaScript (javascript)
+After that, if you attempt to modify elements of the set, you’ll get an error:
+
+
+SET
+
+Union of Sets
+Intersection of Sets
+Difference between Sets
+Symmetric Difference of Sets
+
+
+featured job
+show in listing, view,
+
+check - plan - growth - 2, unlimited -5
+mark featured_job - no on all status change except publised

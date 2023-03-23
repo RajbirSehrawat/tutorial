@@ -1,0 +1,169 @@
+django.contrib.admin
+https://docs.djangoproject.com/en/4.1/ref/contrib/admin/
+
+django.utils.html.escape() 
+ModelAdmin.get_form() 
+
+admin.py
+from django.contrib import admin
+from myapp.models import Author
+
+class AuthorAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Author, AuthorAdmin)
+
+
+OR
+
+@admin.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Author, Reader, Editor, site=custom_admin_site)
+
+admin.site.empty_value_display = '(None)'
+
+---
+ModelAdmin options
+
+
+class AuthorAdmin(admin.ModelAdmin):
+	list_display = ('name', 'title', 'view_birth_date')
+	list_display_links = ('first_name', 'last_name')
+	list_display_links = None
+	list_filter =  []
+	list_max_show_all
+
+
+	fields = ('name', 'title')
+	fields = (('url', 'title'), 'content')
+
+	exclude = ('birth_date',)
+    date_hierarchy = 'pub_date'
+    date_hierarchy = 'author__pub_date'
+    empty_value_display = '-empty-'
+
+    formfield_overrides = {
+        models.TextField: {'widget': RichTextEditorWidget},
+    }
+
+    prepopulated_fields = {"slug": ("title",)}
+    ordering = []
+    search_fields = []
+    search_fields = ['user__email', 'child__name', 'child__age']
+
+    raw_id_fields = ("newspaper",)
+    readonly_fields = ('address_report',)
+
+    @admin.display(empty_value='???')
+    def view_birth_date(self, obj):
+        return obj.birth_date
+
+
+
+ModelAdmin.actions_on_top, ModelAdmin.actions_on_bottom
+ (actions_on_top = True; actions_on_bottom = False).
+
+
+ ModelAdmin.actions_selection_counter
+ (actions_selection_counter = True)
+
+
+ModelAdmin.empty_value_display
+empty_value_display = '-empty-'
+
+
+ModelAdmin.fieldsets
+Set fieldsets to control the layout of admin “add” and “change” pages
+
+class FlatPageAdmin(admin.ModelAdmin):
+    fieldsets = (
+        (None, {
+            'fields': ('url', 'title', 'content', 'sites')
+        }),
+        ('Advanced options', {
+            'classes': ('collapse',),
+            'fields': ('registration_required', 'template_name'),
+        }),
+    )
+
+
+
+
+''ModelAdmin.form
+''ModelAdmin.formfield_overrides
+''ModelAdmin.inlines
+''ModelAdmin.list_display
+
+@admin.display(description='Name')
+def upper_case_name(obj):
+    return ("%s %s" % (obj.first_name, obj.last_name)).upper()
+
+class PersonAdmin(admin.ModelAdmin):
+    list_display = (upper_case_name,)
+
+
+ModelAdmin.list_display_links
+ModelAdmin.list_filter
+ModelAdmin.list_max_show_all
+ModelAdmin.list_per_pag
+ModelAdmin.list_select_related
+ get_list_select_related() 
+ select_related()
+
+ModelAdmin.ordering
+ModelAdmin.paginator
+
+ModelAdmin.prepopulated_fields
+ModelAdmin.preserve_filters
+ModelAdmin.radio_fields
+
+===============================
+ModelAdmin.autocomplete_fields
+ModelAdmin.save_as
+ModelAdmin.save_on_top
+ModelAdmin.search_fields
+ModelAdmin.search_help_text
+ModelAdmin.show_full_result_count
+ModelAdmin.sortable_by
+
+ModelAdmin.view_on_site
+
+=======================
+
+class apps.AdminConfig
+class apps.SimpleAdminConfig
+django.contrib.admin.sites.AdminSite
+
+Overriding the default admin site
+https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#overriding-the-default-admin-site
+
+Multiple admin sites in the same URLconf¶
+https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#multiple-admin-sites-in-the-same-urlconf
+
+Adding a password reset feature
+https://docs.djangoproject.com/en/4.1/ref/contrib/admin/#adding-a-password-reset-feature
+
+======================================================================================================
+****************************AdminSite attributes************************************************
+======================================================================================================
+AdminSite.site_header
+AdminSite.site_title
+AdminSite.site_url
+AdminSite.index_title
+AdminSite.index_template
+AdminSite.app_index_template
+AdminSite.empty_value_display
+AdminSite.enable_nav_sidebar
+
+AdminSite.login_template
+AdminSite.login_form
+AdminSite.logout_template
+AdminSite.password_change_template
+AdminSite.password_change_done_template
+
+
+AdminSite methods
+===================
+
+

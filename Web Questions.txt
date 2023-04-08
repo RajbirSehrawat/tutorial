@@ -1,0 +1,20 @@
+Python
+=======
+1. encoding/decoding
+2. Hashing
+3. Encription/Decription
+4. CORS (Cross Origin Resource Sharing)
+5. CSRF Cross-Site Request Forgery (CSRF)
+6. PUST Vs Post Patch Method
+
+
+
+
+----------------------------------------------------
+1. What is Regular Expressions
+2. What is the difference between concurrency and parallelism?
+
+
+(80/50) * 50
+
+100

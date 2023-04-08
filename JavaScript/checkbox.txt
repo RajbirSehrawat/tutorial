@@ -1,0 +1,27 @@
+https://stackabuse.com/how-to-check-if-checkbox-is-checked-in-jquery-and-javascript/
+
+
+
+
+
+
+$(document).ready(function () {
+  // select all check boxes
+    $("#check_all").click(function () {
+        $(".select_ikon").prop('checked', $(this).prop('checked'));
+        download_button();
+    });
+
+  // Download resume hide and show on checkbox selection
+  $('.select_ikon').change(function() {
+    download_button();
+  });
+
+  function download_button(){
+    if($('input:checkbox.select_ikon:checked').length){
+      $('#download_resume').show();
+    } else{
+      $('#download_resume').hide();
+    }
+  }
+});

@@ -1,0 +1,18 @@
+Python Technical
+------------------
+
+1. What is meaning of ** in python dictionary
+
+
+
+
+from flask import Flask
+app = Flask(__name__)
+if __name__ == "__main__"
+	app.run(host="", port="")
+-----------------------------------------
+
+1. Sorting, searching using recrusion
+2. Questions on sets - to find common in two list, to find difference in two list, to find uniion, interset in two list, tuple
+3. Searching, Sorting in list
+4. Question on strings - Searching, Sorting, Replacing, counting, reverse, sub string

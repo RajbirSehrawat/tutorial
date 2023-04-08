@@ -1,0 +1,31 @@
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-14-04
+
+
+
+
+Python Hosting
+----------------
+
+https://www.easydevguide.com/posts/gunicorn_concurrency
+
+https://stackoverflow.com/questions/71893002/how-to-make-flask-handle-25k-request-per-second-like-express-js
+
+https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/  (Docker Flask
+)
+
+
+
+
+
+Deployment Enironment
+-----------
+
+https://www.plutora.com/environment-management-101
+
+
+https://docs.gitlab.com/ee/ci/environments/
+
+
+Docker & Kubernetes
+-------------
+https://medium.com/avmconsulting-blog/running-a-python-application-on-kubernetes-aws-56609e7cd88c

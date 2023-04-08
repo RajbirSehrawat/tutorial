@@ -1,0 +1,43 @@
+Python
+=======
+1. encoding/decoding (library/functions)
+2. Hashing (Library Functions)
+3. Encription/Decription (Library Function)
+4. CORS (Cross Origin Resource Sharing)
+5. CSRF Cross-Site Request Forgery (CSRF)
+
+6. Thread, Multi Threading, Multi Processing, Concurrency
+
+
+Enterperise Application
+-----------------------------
+1. Global Log Storage (Request/Response)
+2. Global Exception Handling
+
+
+
+-------------------------------
+
+1. Python/OOPS
+2. Django, Flask, REST API
+3. PostgreSql, Mysql, MongoDB
+
+4. Redis, Memcache
+5. Elastic Search
+6. RabitMQ, SQS, Kafka
+7. Celery
+
+-------------------------------
+Python Library
+------------------------------
+
+requests,
+re, regex
+Path, stil, urlib
+collection
+-----------------------
+Pandas
+Numpy
+Scipy
+Metplotlib
+Seaboard

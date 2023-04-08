@@ -1,0 +1,44 @@
+Python/Opps/ Unit Testing
+
+Environment management
+
+
+REST API (Standards)/JWT
+Data Structure/ Questions
+-------------------------------------------------------------------------------------
+
+AWS - EC2, S3, SQS, SNT, ECS, RDS, Cloud Watch, Lamda, API Gateways
+----------------------------------------------------------------------------
+
+Docker, Kubernites, Tera Form, Docker Swarm, Angsible, Jenkis (CI/CS)
+--------------------------------------------------------------------------------------
+Flask/Django/DRF
+Open API/Swagger
+-------------------------------------------------------------------------------------------
+
+Multi-Threading/Multi Processing/ Concurrency/ Aynsc Programming/Soket
+
+SOLID - Principle
+Design Patterns
+Low Level Design / Hight Level Designs
+---------------------------------------------------------------------------------------------
+
+
+Postgresql/SQL/mysql
+
+MongoDB/Casendra/Elastic Search
+
+
+Redis/RabtitMQ/Kafka
+
+Git/Github/Gitlab/Bitcuket/JIRA
+
+-----------------------------------------------------------------------
+
+Software Development Models (Watterfall Models and others)
+Agigle Develoopment / Scrum 
+Software Engineering / Testing (Unit Testing, Integration Testing, Load Testing, Performance Testing)
+
+----------------------------------------------------------------------------
+
+

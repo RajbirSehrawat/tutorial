@@ -1,0 +1,83 @@
+$root
+$facet
+
+$count
+$limit
+$lookup
+
+pipline
+$let
+$expr
+"$$secondUser"
+
+$_id.name
+
+$toDate
+
+$inc
+
+$$ROOT
+------------------
+
+count
+groupby
+limit
+---
+
+projection
+
+-------------
+Fields
+The following operators can be used to update fields:
+
+$currentDate: Sets the field value to the current date
+$inc: Increments the field value
+$rename: Renames the field
+$set: Sets the value of a field
+$unset: Removes the field from the document
+Array
+The following operators assist with updating arrays.
+
+$addToSet: Adds distinct elements to an array
+$pop: Removes the first or last element of an array
+$pull: Removes all elements from an array that match the query
+$push: Adds an element to an array
+
+=========
+
+{ "$match": {
+"$expr": {
+  "$and": [
+    { "$eq": ["$patientId", "$$patientId"] },
+    { "$eq": ["$branchId", "$$clinic_id"] }
+  ]
+},
+"acknowleged": false
+}}
+result = company_collection.aggregate([
+                {"$match": {"contacts.country": "India"}},
+                {"$lookup": {
+                    "from": "users",
+                    "localField": "_id",
+                    "foreignField": "company_id",
+                    "as": "users",
+                    "pipeline": [
+                        { "$match": {
+                        "$expr": {
+                            "$and": [
+                                { "$gte": ["created_datetime", "2023-02-23T00:00:00+0000"] },
+                                { "$lte": ["created_datetime", "2023-02-23T00:00:00+0000"] }
+                            ]
+                        }
+                    }}, {"$project": {"email": 1}}
+                    ]
+                }},
+                {"$unwind": "$users"},
+                {"$project": {
+                    'name': 1,
+                    'email': "$users.email"
+                }},
+                {"$count": 'total_count'},
+                {"$project": {
+                    'total_count': "$total_count"
+                }},

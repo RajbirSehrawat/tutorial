@@ -1,0 +1,36 @@
+
+
+UNION
+UNION ALL
+
+GROUP BY -   (COUNT(), MAX(), MIN(), SUM(), AVG())
+HAVING (where is not used with aggregate functions)
+
+EXISTS
+The EXISTS operator is used to test for the existence of any record in a subquery.
+
+
+Condition
+-----------
+
+IN, BETWEEN, ANY, ALL
+
+CASE, IF ELSE
+------------
+SELECT IF(500<1000, "YES", "NO");
+SELECT IF(STRCMP("hello","bye") = 0, "YES", "NO");
+SELECT OrderID, Quantity, IF(Quantity>10, "MORE", "LESS") FROM OrderDetails;
+
+
+
+
+functions
+---------
+
+IFNULL()
+COALESCE()
+
+Difference in IFNULL and COALESCE
+
+CONCAT_WS()
+DIFFERENCE in CONCAT_WS and CONCAT

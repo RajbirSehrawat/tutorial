@@ -1,0 +1,39 @@
+1. NO specific definition of KRA's (What is KRA's), What is KPI
+2. POC - What is POC in software developments
+3. ENV (Development, SIT, QC, UAT, Prod, PreProd)
+
+------------------------------------------------------------
+1. Agile, Waterfall model, Scrum Master, Scrum Meetings
+2. Unit Testing, Itegration Testing
+
+
+3. Sprints, CAB, CAB Report, Strories
+4. Jira Software Issue managment
+5. Git work flow managment
+
+
+------------------
+1. What is Monkey patching
+2. What is Event loop
+3. What is Cooperative multitasking
+4. What is  application work is mainly I/O bound, 
+
+
+-----------------------------------
+Flask Deployment
+-----------------------------------
+
+1. How to Handle 1000 concurrent requests for Flask/Gunicorn web service
+Ans. https://stackoverflow.com/questions/45067995/handle-1000-concurrent-requests-for-flask-gunicorn-web-service
+
+Ans2. https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7  - (Answer)
+      gunicorn --worker-class=gevent --worker-connections=1000 --workers=3 main:app
+
+      gunicorn -k gevent myapp:app
+
+
+      https://stackoverflow.com/questions/35914587/how-to-get-a-concurrency-of-1000-requests-with-flask-and-gunicorn
+
+
+Q2. Flask application scaling on Kubernetes and Gunicorn
+

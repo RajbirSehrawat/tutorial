@@ -16,6 +16,10 @@ mean() - Average
 median() - middle 
 mode() - the value apread more frequently
 
+duplicated()
+drop_duplicates()
+
+corr() - Find relationship
 =============================================
 
  

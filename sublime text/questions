@@ -31,6 +31,9 @@
 27. Which Mutable and Immutable Data Type in Python
 24. print("%s is %s." % (p.first_name, p.age))
 
+
+25. What can be dict key - from list, tuple, set, string, True, False etc	
+
 --
 what is redis
 what is redis complixity
@@ -56,6 +59,13 @@ Datastruce
 
 
 Program
+
+Shift all the zero the end of the list
+list1 = [2,0,5,3,0,1,0 ]
+Output = [2,5,3,1,0,0,0]
+
+ 
+
 
 1. Create a generator to find prime number upto given number
 ---

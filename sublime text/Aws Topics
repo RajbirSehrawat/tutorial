@@ -1,0 +1,138 @@
+Topics
+Classic Data Center
+Virtualization
+Cloud and Cloud Computing
+Cloud Computing Service Models
+Cloud Computing Deployment Models
+Service Comparison: AWS, Azure, and GCP
+Amazon Web Services (AWS) and its Benefits
+AWS Global Infrastructure
+AWS Regions and Replication of data between the Regions
+Availability Zones and High Availability
+PoP Locations
+Signup an AWS Free Tier Account
+Different Amazon Web Services
+Ways to access AWS: CLI, Console, and SDKs
+Explore Management Console and Configure AWS CLI
+AWS CloudShell
+
+
+EC2
+
+Topics
+Compute Virtualization
+Amazon Elastic Compute Cloud (EC2) and Its Benefits
+Amazon Machine Image (AMI)
+Security Groups in AWS
+Authentication through Key-pair
+Hardware Tenancy – Shared vs. Dedicated
+Networking Layer in EC2: VPC
+Elastic Network Interface (ENI) and Its Attributes
+Public IP vs. Elastic IP
+Instance Store
+Elastic Block Store (EBS), Its Features and Volume Types
+Solid State Drive: General Purpose SSD and Provisioned IOPS
+Hard Disk Drive: Throughput Optimized HDD and Cold HDD
+Snapshots
+Elastic File System (EFS) and Its Features
+Amazon Batch
+Windows File Server
+Amazon FSx for Windows File Server
+Use case of Amazon FSx for Windows File Server
+Amazon FSx for Lustre
+
+
+
+IAM
+
+Topics
+Threats to AWS Security
+AWS Shared Responsibility Model
+AWS Security Solutions
+Identity and Access Management (IAM)
+Managing Users with IAM
+Managing Permissions with Groups
+IAM Policy and its Elements
+IAM Roles
+Password Policy
+MFA
+Best Practices for IAM
+AWS Security Token Services
+AWS Single Sign-on
+AWS Resources Access Manager
+Active directory
+Microsoft Active directory
+AWS Directory Services
+AWS Artifact
+AWS Audit Manager
+AWS Certificate Manager
+Accessing Billing and Alerts
+
+
+AWS Storage
+
+Topics
+Traditional Storage
+Need to Move to Cloud Storage
+Traditional vs. Cloud Storage Cost
+Cloud Storage
+Different Storage Options Available on AWS
+Simple Storage Service (S3) and Its Components
+Working of S3
+Bucket Policy
+Access Control List (ACL)
+Versioning
+S3 Replicate
+Cross-Region Replication (CRR) and Its Use Case
+Amazon S3 Transfer Acceleration
+Choice of Storage Classes on S3
+Lifecycle Policy of S3 Bucket
+AWS Backup
+CDN: CloudFront
+Storage Gateway
+
+
+AWS Load
+
+Topics
+Elastic Load Balancer
+Network Load Balancer
+Application Load Balancer
+Gateway Load Balancer
+Advanced Features of ELB
+Benefits and Components of Application Load Balancer
+Load Balancer Troubleshoot
+Auto Scaling and its Benefits
+Auto Scaling Components
+Launch Configurations/ Launch Templates
+Scaling Policies
+Lifecycle of Auto Scaling
+Working on Load Balancer and Auto Scaling
+Scaling Policy
+Use Case of DNS
+Need of Route 53
+Route 53 and it’s Working
+Various Routing Policies
+
+
+AWS -  Database
+
+Topics
+Database
+AWS Database Services – Use Cases
+Amazon RDS
+Read Replica
+IAM in Amazon RDS
+Difference Between SQL and NoSQL Databases
+Amazon DynamoDB and its Data Structure
+Amazon ElastiCache
+Memcached vs. Redis
+Amazon RedShift and its features
+AWS Redshift Architecture
+Aurora Database
+Connection Management in Aurora
+Amazon Aurora Reliability
+Amazon Aurora Global Database
+Amazon Aurora Serverless
+Amazon Keyspaces
+Apache Cassandra

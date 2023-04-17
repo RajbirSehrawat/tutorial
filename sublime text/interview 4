@@ -13,6 +13,13 @@ ms4 prod database uri-pending  - Not pushed to qc
 
 ---------------------------------------------------------------------
 
+1. What is MRO in python - Method Resolution Order
+2. Create a decorator to multiple  by 10 a,b if both are 10 the sum will be 40
+
+@dec
+def sum(a,b)
+ return a+B
+
 1. What to do if token exprie in jwt.
 2. CSRF, How to handle csrf
 3. What are middleware in djngo, how to write middlewrare
@@ -49,5 +56,3 @@ https://www.geeksforgeeks.org/reverse-words-given-string-python/
 4. What is the difference between list and tupple, which is faster, which is more memory efficient, which is used when.
 
 
-
-mongodb+srv://uatmasteruser11:jfFMxOvnTOiLLsPB@cluster0.bduj6.mongodb.net/ms7uatdridges?retryWrites=true&w=majority

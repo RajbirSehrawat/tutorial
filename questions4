@@ -1,0 +1,47 @@
+Python | Convert a nested list into a flat list ex. [[1,2],[3,4][2,5,6],[5,5,5]]
+
+
+[12:22 PM] Vishesh Srivastava
+    a -> [5, 4, -11, 7, 8, 0]
+	b -> [2, 7, 1, 0, 9]
+
+	for n in a:
+	  if 9-n in b:
+	     print n, 
+
+
+    employee
+id    name    manager  performance    salary
+1    a        -        8            100
+2    b        1        9            50
+3    c        1        9            80
+4    d        -        10           110
+5    e        4        9            90
+
+===========
+
+employe
+
+
+SELECT (salary) FROM employee ORDER BY salary DESC Limit 1,1
+
+SELECT name, salary from employee where salary in (SELECT (salary) FROM employee ORDER BY salary DESC Limit 1,1)
+
+
+SELECT m.name FROM empoyee m, employee e WHERE
+
+SELECT SUM(e.performance) as total, m.name as name FROM employee as e, employee as m GROUP BY m.manager where e.id=m.manager ORDER BY total DESC 1
+
+
+select name from employee where performance > 8
+
+select name from employee where performance > 8 and salary < 100
+
+select name from employee where performance > 8 and salary < 100 and manager is not null
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+Write a funtion to add value on given index without using any inbuilt function
+
+def list_update(loc, val):
+    # loc 3
+    list1 = [5,3,7,1]
+    list2 = list1[:loc] + list([val]) + list1[loc:]
+    return list2
+list_update(3,50)
+    
+    
+
+Given decorators what is the output of given code
+
+def decor1(func):
+        def inner():
+                x = func()
+                return x * x
+        return inner
+
+def decor(func):
+        def inner():
+                x = func()
+                return 2 * x
+        return inner
+
+@decor1
+@decor
+
+def num():
+    return 10
+
+print(num())
+
+400
+
+
+Find the largest palendrom in given string
+name = "pipapig"
+output ipapi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
